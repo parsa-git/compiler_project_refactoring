@@ -1,5 +1,5 @@
 site_name: Dr Saeed Parsa Compiler Course
-
+repo_url: https://github.com/parsa-git/compiler_project_refactoring
 
 theme:
   name: material
@@ -18,4 +18,10 @@ plugins:
 
 nav:
     - Home: index.md
-    - Factory Pattern: factory.md
+    - Lectures:
+        - Lexical analysis: lectures/lexical_analysis.md
+        - Grammars and Parsing: lectures/grammars_and_parsing.md
+        - Top-down parser: lectures/top_down_parser.md
+    - Projects:
+      - Factory pattern: projects/design_pattern/factory.md
+      - Singleton pattern: projects/design_pattern/singleton.md
