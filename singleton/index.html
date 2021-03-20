@@ -14,7 +14,7 @@
     
     
       
-        <title>Factory Pattern - Dr Saeed Parsa Compiler Course</title>
+        <title>Singleton - Dr Saeed Parsa Compiler Course</title>
       
     
     
@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#factory-design-pattern" class="md-skip">
+        <a href="#singleton-design-pattern" class="md-skip">
           Skip to content
         </a>
       
@@ -90,7 +90,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Factory Pattern
+              Singleton
             
           </span>
         </div>
@@ -184,6 +184,21 @@
 
   
   
+  
+    <li class="md-nav__item">
+      <a href="../factory/" class="md-nav__link">
+        Factory Pattern
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
     
   
   
@@ -195,12 +210,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Factory Pattern
+          Singleton
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Factory Pattern
+        Singleton
       </a>
       
         
@@ -217,15 +232,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#Refactoring.Factory.Factory.FactoryMethodRefactoringListener" class="md-nav__link">
-    Refactoring.Factory.Factory.FactoryMethodRefactoringListener
+  <a href="#Refactoring.Singleton.Singleton.SingletonRefactoringListener" class="md-nav__link">
+    Refactoring.Singleton.Singleton.SingletonRefactoringListener
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#Refactoring.Factory.Factory.FactoryMethodRefactoringListener.enterClassDeclaration" class="md-nav__link">
-    enterClassDeclaration()
+  <a href="#Refactoring.Singleton.Singleton.SingletonRefactoringListener.__init__" class="md-nav__link">
+    __init__()
   </a>
   
 </li>
@@ -234,21 +249,6 @@
   
 </nav>
       
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../singleton/" class="md-nav__link">
-        Singleton
-      </a>
     </li>
   
 
@@ -278,15 +278,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#Refactoring.Factory.Factory.FactoryMethodRefactoringListener" class="md-nav__link">
-    Refactoring.Factory.Factory.FactoryMethodRefactoringListener
+  <a href="#Refactoring.Singleton.Singleton.SingletonRefactoringListener" class="md-nav__link">
+    Refactoring.Singleton.Singleton.SingletonRefactoringListener
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#Refactoring.Factory.Factory.FactoryMethodRefactoringListener.enterClassDeclaration" class="md-nav__link">
-    enterClassDeclaration()
+  <a href="#Refactoring.Singleton.Singleton.SingletonRefactoringListener.__init__" class="md-nav__link">
+    __init__()
   </a>
   
 </li>
@@ -304,15 +304,15 @@
               
                 
                 
-                <h1 id="factory-design-pattern">Factory design pattern</h1>
+                <h1 id="singleton-design-pattern">Singleton design pattern</h1>
 
 
   <div class="doc doc-object doc-class">
 
-<a id="Refactoring.Factory.Factory.FactoryMethodRefactoringListener"></a>
+<a id="Refactoring.Singleton.Singleton.SingletonRefactoringListener"></a>
     <div class="doc doc-contents first">
 
-      <p>This class refactors a given class based on the Factory pattern using ANTLR</p>
+      <p>This class refactors a given class based on the Singleton pattern using ANTLR</p>
 
 
 
@@ -327,39 +327,39 @@
 
 
 
-
   <div class="doc doc-object doc-method">
 
 
 
-<h2 id="Refactoring.Factory.Factory.FactoryMethodRefactoringListener.enterClassDeclaration" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">enterClassDeclaration</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ctx</span><span class="p">)</span></code>
+<h2 id="Refactoring.Singleton.Singleton.SingletonRefactoringListener.__init__" class="doc doc-heading">
+<code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">common_token_stream</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">class_identifier</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-special"><code>special</code></small>
+  </span>
 
 </h2>
 
     <div class="doc doc-contents ">
 
-      <p>To update site: mkdocs gh-deploy
-Accepts the class name and returns the position of the class to be refactored</p>
+      <p>:param common_token_stream:</p>
 
         <details class="quote">
-          <summary>Source code in <code>factory\factory.py</code></summary>
-          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">enterClassDeclaration</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ctx</span><span class="p">:</span><span class="n">JavaParserLabeled</span><span class="o">.</span><span class="n">ClassDeclarationContext</span><span class="p">):</span>
+          <summary>Source code in <code>singleton\singleton.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">common_token_stream</span><span class="p">:</span> <span class="n">CommonTokenStream</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+             <span class="n">class_identifier</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    To update site: mkdocs gh-deploy</span>
-<span class="sd">    Accepts the class name and returns the position of the class to be refactored</span>
+<span class="sd">    :param common_token_stream:</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">if</span> <span class="n">ctx</span><span class="o">.</span><span class="n">IDENTIFIER</span><span class="p">()</span><span class="o">.</span><span class="n">getText</span><span class="p">()</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">creator_identifier</span><span class="p">:</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">inCreator</span> <span class="o">=</span> <span class="kc">True</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">CretorStartIndex</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">classBody</span><span class="p">()</span><span class="o">.</span><span class="n">start</span><span class="o">.</span><span class="n">tokenIndex</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">currentClass</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">IDENTIFIER</span><span class="p">()</span><span class="o">.</span><span class="n">symbol</span><span class="o">.</span><span class="n">text</span>
-
-
-    <span class="k">elif</span> <span class="n">ctx</span><span class="o">.</span><span class="n">IDENTIFIER</span><span class="p">()</span><span class="o">.</span><span class="n">getText</span><span class="p">()</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">products_identifier</span><span class="p">:</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">inProducts</span> <span class="o">=</span> <span class="kc">True</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">productsClassIndex</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">IDENTIFIER</span><span class="p">()</span><span class="o">.</span><span class="n">symbol</span><span class="o">.</span><span class="n">tokenIndex</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">currentClass</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">IDENTIFIER</span><span class="p">()</span><span class="o">.</span><span class="n">symbol</span><span class="o">.</span><span class="n">text</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">enter_class</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">token_stream</span> <span class="o">=</span> <span class="n">common_token_stream</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">class_identifier</span> <span class="o">=</span> <span class="n">class_identifier</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">ObjectIndex</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="c1"># Move all the tokens in the source code in a buffer, token_stream_rewriter.</span>
+    <span class="k">if</span> <span class="n">common_token_stream</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">token_stream_rewriter</span> <span class="o">=</span> <span class="n">TokenStreamRewriter</span><span class="p">(</span><span class="n">common_token_stream</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;common_token_stream is None&#39;</span><span class="p">)</span>
 </code></pre></div>
         </details>
     </div>
@@ -398,7 +398,7 @@ Accepts the class name and returns the position of the class to be refactored</p
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
-        <a href=".." class="md-footer__link md-footer__link--prev" rel="prev">
+        <a href="../factory/" class="md-footer__link md-footer__link--prev" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -407,25 +407,11 @@ Accepts the class name and returns the position of the class to be refactored</p
               <span class="md-footer__direction">
                 Previous
               </span>
-              Home
+              Factory Pattern
             </div>
           </div>
         </a>
       
-      
-        <a href="../singleton/" class="md-footer__link md-footer__link--next" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              Singleton
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
-        </a>
       
     </nav>
   
